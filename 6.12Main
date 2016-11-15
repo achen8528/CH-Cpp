@@ -1,0 +1,36 @@
+#include <iostream>
+
+using namespace std;
+
+int* remove_duplicates(int* arr, int* size)
+{
+    int z[size];
+    int zPointer = 0;
+    for(int x=0;x<size;x++)
+    {
+        int* pVal = find(begin(z), std::end(z), arr[x])
+        if (pVal == end(arr)) {
+            z[zPointer] = arr[x];
+            zPointer++;
+        }
+    }
+    size = zPointer+1;
+    return z;
+}
+
+int main()
+{
+   int size = 9;
+   int a[9] = {1, 4, 9, 16, 9, 7, 4, 9, 11};
+   
+   int b[size] = remove_deplicates(a, size);
+   
+   for(int x=0;x<size;x++)
+   {
+        cout << b[x] << ", " << endl;
+   }
+   cout << endl;
+   bool result = equals(a, size, b, size);
+   
+   return 0;
+}
